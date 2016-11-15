@@ -29,6 +29,12 @@ class String
     score_board.store("Q", 10)
     score_board.store("Z", 10)
 
-    score_board.fetch(self.upcase)
+    letters = self.split("")
+    total = 0
+
+    letters.each() do |letter|
+      total += score_board.fetch(letter.upcase)
+    end
+    total
   end
 end
